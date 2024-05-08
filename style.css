@@ -1,0 +1,75 @@
+body{
+    margin: 0px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(45deg, purple, transparent);
+}
+.board{
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(3.5);
+    position: relative;
+}
+.board > .rows{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3px 0px;
+    gap: 2px;
+}
+.board > .rows > div{
+    background-color: #36454f;
+    border-radius: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board > .rows > div > p{
+    margin: 0px;
+    border-radius: 50%;
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    transition: ease-in-out 0.8s;
+}
+button{
+    color: white;
+    background: linear-gradient(to right, purple, orangered);
+    border-radius: 10px;
+    padding: 10px 25px;
+    border: 2px solid purple;
+    box-shadow: 1px 1px 2px 3px rgba(0,0,0,0.6);
+    font-size: 1.4em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: ease 0.3s;
+    margin-top: 110px;
+}
+button:active{
+    box-shadow: none;
+}
+@media (max-width: 815px) {
+    .board{
+        transform: scale(1.6);
+    }
+    button{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 615px){
+    .board{
+        transform: scale(1.2);
+    }
+    button{
+        margin-top: 10px;
+    }
+}
